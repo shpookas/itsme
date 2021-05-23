@@ -13,7 +13,7 @@ import Loading from "./components/Loading";
 import Error from "./components/Error";
 
 import spotifyUtils from "./utils/spotify";
-import mutual from "./utils/mutual";
+var mutual = require("./utils/mutual");
 
 class App extends Component {
 	constructor(props) {
