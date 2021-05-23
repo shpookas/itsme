@@ -5,7 +5,11 @@ const WAIT_TO_RETRY = 2; // seconds
 const REQUEST_MAX_RETRIES = 8;
 const CACHE_EXPIRATION = 24; // hours
 
-function getListOfMutualSongs(spotifyApi, friendsUserID, setLoadingStatus) {
+export function getListOfMutualSongs(
+	spotifyApi,
+	friendsUserID,
+	setLoadingStatus
+) {
 	let cacheIsAvailable = isCacheAvailable();
 
 	let phaseTitles = [];
@@ -347,7 +351,7 @@ function getMutualSet(set1, set2) {
 	return res;
 }
 
-function addSongsToPlaylist(userId, playlistId, songList, spotifyApi) {
+export function addSongsToPlaylist(userId, playlistId, songList, spotifyApi) {
 	let nextPromise = Promise.resolve();
 	for (let offset = 0; offset < songList.length; offset += 100) {
 		let songsToAdd = songList.slice(offset, offset + 100);
@@ -453,5 +457,3 @@ function wait(seconds) {
 		return new Promise(resolve => setTimeout(() => resolve(), seconds * 1000));
 	};
 }
-
-module.exports = { getListOfMutualSongs, addSongsToPlaylist };

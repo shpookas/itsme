@@ -12,13 +12,12 @@ import PlaylistResult from "./components/PlaylistResult";
 import Loading from "./components/Loading";
 import Error from "./components/Error";
 
-import spotifyUtils from "./utils/spotify";
-var mutual = require("./utils/mutual");
-
+import { checkForAccessToken } from "./utils/spotify";
+import { addSongsToPlaylist } from "./utils/mutual";
 class App extends Component {
 	constructor(props) {
 		super(props);
-		var spotifyHash = spotifyUtils.checkForAccessToken();
+		var spotifyHash = checkForAccessToken();
 		var spotifyApi;
 		if (spotifyHash) {
 			spotifyApi = new SpotifyWebAPI();
@@ -122,7 +121,7 @@ class App extends Component {
 					isLoading: false,
 					playlistResult: playlist.external_urls.spotify
 				});
-				return mutual.addSongsToPlaylist(
+				return addSongsToPlaylist(
 					self.state.user.id,
 					playlist.id,
 					self.state.mutualSongs,
