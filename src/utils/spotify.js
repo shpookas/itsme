@@ -1,6 +1,6 @@
 const SPOTIFY_CLIENT_ID = "1a4c17edb0f044d9a4b14bb3d1353a49";
 
-function checkForAccessToken() {
+export function checkForAccessToken() {
 	// https://stackoverflow.com/questions/38706233/javascript-mime-type-text-html-is-not-executable-and-strict-mime-type-chec
 
 	var hash = {};
@@ -27,7 +27,7 @@ function checkForAccessToken() {
 	}
 }
 
-function login() {
+export function login() {
 	var scopes = "playlist-read-private playlist-modify-public user-library-read";
 	window.location.href =
 		"https://accounts.spotify.com/authorize" +
@@ -41,5 +41,3 @@ function login() {
 		encodeURIComponent(scopes) + // optional
 		"";
 }
-
-module.exports = { checkForAccessToken, login };
