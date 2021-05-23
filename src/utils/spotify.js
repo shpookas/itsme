@@ -1,4 +1,4 @@
-const SPOTIFY_CLIENT_ID = "fc8401f043424922bb168fad6d46923b";
+const SPOTIFY_CLIENT_ID = "1a4c17edb0f044d9a4b14bb3d1353a49";
 
 export function checkForAccessToken() {
 	// https://stackoverflow.com/questions/38706233/javascript-mime-type-text-html-is-not-executable-and-strict-mime-type-chec
