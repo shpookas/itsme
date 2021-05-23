@@ -1,7 +1,7 @@
 {
 	"name": "mutual-music",
 	"version": "0.1.0",
-	"homepage": "https://www.tannerkrewson.com/mutual-music/",
+	"homepage": "https://itsme.vercel.app/",
 	"dependencies": {
 		"gh-pages": "^1.2.0",
 		"react": "^16.4.1",
