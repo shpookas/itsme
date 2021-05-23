@@ -8,7 +8,7 @@
 		"react-clipboard.js": "^2.0.0",
 		"react-dom": "^16.4.1",
 		"react-icons": "^2.2.7",
-		"react-scripts": "^1.1.4",
+		"react-scripts": "^4.0.3",
 		"react-share": "^2.2.0",
 		"spotify-web-api-js": "^0.24.0"
 	},
@@ -25,5 +25,17 @@
 		"husky": "^0.14.3",
 		"prettier": "1.13.5",
 		"pretty-quick": "^1.6.0"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }
